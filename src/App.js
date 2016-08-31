@@ -1,13 +1,5 @@
 import React, { Component } from 'react';
-import { createStore } from 'redux';
-import { connect } from 'react-redux';
-
-import recipeApp from './Reducer';
-import { addRecipe, removeRecipe } from './Actions';
-
 import './App.css';
-
-const store = createStore(recipeApp);
 
 const RecipeBox = (props) => {
   return (
