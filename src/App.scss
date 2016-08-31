@@ -1,0 +1,34 @@
+$default-border: 1px solid grey;
+$default-padding: 5px;
+$default-margin: 5px;
+
+.recipe-name {
+    padding: $default-padding;
+    font-size: 2rem;
+    margin-bottom: $default-margin;
+}
+
+.ingredient {
+    border: $default-border;
+    padding: $default-padding;
+    margin-bottom: $default-margin;
+}
+
+.recipe-box {
+    border: $default-border;
+    padding: $default-padding;
+    margin-bottom: $default-margin;
+}
+
+.recipe-form {
+    border: $default-border;
+    padding: $default-padding;
+    margin-bottom: $default-margin;
+}
+
+.recipe-form {
+    input, button {
+        margin: $default-margin;
+        padding: $default-padding;
+    }
+}

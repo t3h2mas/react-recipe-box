@@ -1,0 +1,23 @@
+.recipe-name {
+  padding: 5px;
+  font-size: 2rem;
+  margin-bottom: 5px; }
+
+.ingredient {
+  border: 1px solid grey;
+  padding: 5px;
+  margin-bottom: 5px; }
+
+.recipe-box {
+  border: 1px solid grey;
+  padding: 5px;
+  margin-bottom: 5px; }
+
+.recipe-form {
+  border: 1px solid grey;
+  padding: 5px;
+  margin-bottom: 5px; }
+
+.recipe-form input, .recipe-form button {
+  margin: 5px;
+  padding: 5px; }
