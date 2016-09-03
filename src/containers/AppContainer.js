@@ -1,7 +1,7 @@
-import App from './App';
+import App from '../components/App';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import * as creators from './Actions';
+import * as creators from '../actions/Actions';
 
 const mapStateToProps = state => ({
   recipes: state.recipes
@@ -11,8 +11,7 @@ const mapDispatchToProps = dispatch => bindActionCreators(creators, dispatch);
 
 const AppContainer = connect(
   mapStateToProps,
-  mapDispatchToProps,
-  null
+  mapDispatchToProps
 )(App);
 
 export default AppContainer;

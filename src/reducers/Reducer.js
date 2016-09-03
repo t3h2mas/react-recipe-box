@@ -1,4 +1,4 @@
-import {ADD_RECIPE, REMOVE_RECIPE} from './Actions';
+import {ADD_RECIPE, REMOVE_RECIPE} from '../actions/Actions';
 
 const initialState = {
   recipes: [ { name: 'Guacamole', ingredients: 'Avocado,Lime,Salt,Tomato,Jalapeno,Garlic', id: 0} ]

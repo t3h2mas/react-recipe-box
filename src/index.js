@@ -3,14 +3,18 @@ import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
-import App from './Container';
-import recipeApp from './Reducer';
+import AppContainer from './containers/AppContainer';
+import recipeApp from './reducers/Reducer';
 
 const store = createStore(recipeApp);
 
-ReactDOM.render(
+const app = (
   <Provider store={store}>
-    <App />
-  </ Provider>,
+    <AppContainer />
+  </Provider>
+);
+
+ReactDOM.render(
+  app,
   document.getElementById('root')
 );
