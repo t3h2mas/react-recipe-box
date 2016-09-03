@@ -4,9 +4,9 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
 import AppContainer from './containers/AppContainer';
-import recipeApp from './reducers/Reducer';
+import reducer from './reducers/index';
 
-const store = createStore(recipeApp);
+const store = createStore(reducer);
 
 const app = (
   <Provider store={store}>

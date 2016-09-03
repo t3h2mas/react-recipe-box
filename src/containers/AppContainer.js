@@ -4,7 +4,8 @@ import { connect } from 'react-redux';
 import * as creators from '../actions/Actions';
 
 const mapStateToProps = state => ({
-  recipes: state.recipes
+  recipes: state.recipeApp.recipes,
+  show: state.toggle.show
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators(creators, dispatch);

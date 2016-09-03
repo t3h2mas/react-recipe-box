@@ -15,7 +15,7 @@ class AddRecipe extends Component{
   }
   handleClick(){
     this.disable()
-    this.props.showForm();
+    // this.props.showForm();
   }
   render(){
     return <button type="button" ref="btn" className="btn btn-primary" onClick={this.handleClick}>New Recipe</button>;
