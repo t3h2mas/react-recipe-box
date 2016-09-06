@@ -1,9 +1,15 @@
 $default-border: 1px solid grey;
+$border-radius: 3px;
 $default-padding: 5px;
 $default-margin: 5px;
 
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
 .recipe-name {
     padding: $default-padding;
+    border-radius: $border-radius;
     font-size: 2rem;
     margin-bottom: $default-margin;
 }
@@ -16,6 +22,7 @@ $default-margin: 5px;
 
 .recipe-box {
     border: $default-border;
+    border-radius: $border-radius;
     padding: $default-padding;
     margin-bottom: $default-margin;
 }
@@ -31,4 +38,10 @@ $default-margin: 5px;
         margin: $default-margin;
         padding: $default-padding;
     }
+}
+
+// x -> remove recipe
+.fr {
+    float: right;
+    font-size: 1.8rem;
 }

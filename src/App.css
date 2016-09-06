@@ -1,5 +1,9 @@
+* {
+  font-family: 'Raleway', sans-serif; }
+
 .recipe-name {
   padding: 5px;
+  border-radius: 3px;
   font-size: 2rem;
   margin-bottom: 5px; }
 
@@ -10,6 +14,7 @@
 
 .recipe-box {
   border: 1px solid grey;
+  border-radius: 3px;
   padding: 5px;
   margin-bottom: 5px; }
 
@@ -21,3 +26,7 @@
 .recipe-form input, .recipe-form button {
   margin: 5px;
   padding: 5px; }
+
+.fr {
+  float: right;
+  font-size: 1.8rem; }
