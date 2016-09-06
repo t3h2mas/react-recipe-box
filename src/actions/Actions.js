@@ -2,6 +2,7 @@
 
 export const ADD_RECIPE = 'ADD_RECIPE';
 export const REMOVE_RECIPE = 'REMOVE_RECIPE';
+export const EDIT_RECIPE = 'EDIT_RECIPE';
 
 export const addRecipe = (name, ingredients) => ({
   type: ADD_RECIPE,
@@ -9,9 +10,16 @@ export const addRecipe = (name, ingredients) => ({
   ingredients
 });
 
-export const removeRecipe = (index) => ({
+export const removeRecipe = (id) => ({
   type: REMOVE_RECIPE,
-  index
+  id
+});
+
+export const editRecipe = (id, name, ingredients) => ({
+  type: EDIT_RECIPE,
+  id,
+  name,
+  ingredients
 });
 
 // toggleForm actions

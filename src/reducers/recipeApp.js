@@ -1,4 +1,4 @@
-import {ADD_RECIPE, REMOVE_RECIPE} from '../actions/Actions';
+import {ADD_RECIPE, EDIT_RECIPE, REMOVE_RECIPE} from '../actions/Actions';
 
 // assume state is an array
 
@@ -25,6 +25,20 @@ const recipeApp = (state = initialState, action) => {
           id: state.length // hacky
         }
        ];
+    case EDIT_RECIPE:
+      return state.map(recipe => {
+        if (recipe.id === action.id) {
+          return Object.assign(
+            {},
+            recipe,
+            {
+              name: action.name,
+              ingredients: action.ingredients
+            }
+          );
+        }
+        return recipe;
+      });
     case REMOVE_RECIPE:
       if (state.length === 0) return state;
       return state.filter(recipe => {
