@@ -14,12 +14,16 @@ class AddRecipe extends Component{
     this.refs.btn.className="btn btn-primary";
   }
   handleClick(){
-    this.disable()
-    // this.props.showForm();
+    //this.disable()
+    this.props.toggleForm();
   }
   render(){
     return <button type="button" ref="btn" className="btn btn-primary" onClick={this.handleClick}>New Recipe</button>;
   }
+}
+
+AddRecipe.propTypes = {
+  toggleForm: React.PropTypes.func.isRequired
 }
 
 export default AddRecipe;

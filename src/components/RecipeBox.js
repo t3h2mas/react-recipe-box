@@ -1,16 +1,27 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Recipe from './Recipe';
 
 const RecipeBox = (props) => {
-  let recipes = props.recipes || [{name: 'bork', ingredients: 'bork,bork', id: 0}];
-  let recipeNodes = recipes.map((recipe) => {
-    return <Recipe name={recipe.name} ingredients={recipe.ingredients} key={recipe.id} />
+  const removeRecipe = props.removeRecipe; // scope to `.map`
+  let recipeNodes = props.recipes.map((recipe) => {
+    return <Recipe 
+              name={recipe.name} 
+              ingredients={recipe.ingredients} 
+              id={recipe.id} 
+              key={recipe.id} 
+              removeRecipe={removeRecipe}
+            />
   });
   return (
   <div className="recipe-box">
     {recipeNodes}
   </div>
   )
+};
+
+RecipeBox.propTypes = {
+  recipes: React.PropTypes.array.isRequired,
+  removeRecipe: React.PropTypes.func.isRequired
 };
 
 export default RecipeBox;
