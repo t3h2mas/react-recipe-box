@@ -11,7 +11,7 @@ import createEngine from 'redux-storage-engine-localstorage';
 
 const wrappedReducer = storage.reducer(reducer);
 const engine = createEngine('recipe-box');
-const middleware = storage.createMiddleware(engine);
+const middleware = storage.createMiddleware(engine, ['TOGGLE_FORM']); // blacklist TOGGLE_FORM
 
 const createStoreWithMiddleware = applyMiddleware(middleware)(createStore);
 
